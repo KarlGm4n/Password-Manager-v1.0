@@ -1,6 +1,11 @@
 # inprogress
-<br>proge neljanda kursuse töö<br>
-<br>liikmed - karl ; erik ; joosep<br>
-<br>probleem - puudub<br>
-<br>rollid - jagamata<br>
-<br>testfail nimega test_nimi.py (näiteks test_tauno.py), mis väljastaks ekraanile teie nime - tegemisel<br>
+<br>- Programmeerimise neljanda kursuse töö -<br>
+<br><br>
+<br>Liikmed - Karl ; Erik ; Joosep<br>
+<br>Probleem - Paroolide haldaja + genereerija<br>
+<br>Rollid:<br>
+<br>Andmehaldus -<br>
+<br>Turvalisus -<br>
+<br>Graafika -<br>
+<br><br>
+<br>"Testfail nimega test_nimi.py (näiteks test_tauno.py), mis väljastaks ekraanile teie nime." - olemas<br>
