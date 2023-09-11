@@ -7,6 +7,16 @@
 <br>Andmehaldus - Karl<br>
 <br>Turvalisus - Erik<br>
 <br>Graafika - Joosep<br>
-<br>Dokumentatsioon Discordis - https://discord.gg/ZmnFXVqj - Kui ei tööta, kontakteeruda<br>
+<br>Dokumentatsioon Discordis - https://discord.gg/ZmnFXVqj - Kui ei tööta, kontakteeruda liikmetega<br>
 
 ![paberprototüüp](https://github.com/KarlGm4n/inprogress/assets/143991529/29164102-4e0c-49ca-bb80-46559e98f4ae)
+
+# Teha
+<br>Andmehaldus<br>
+<br>Andmete krüpeetimine, soolamine<br>
+# Tegemisel
+<br>Kasutajaliides<br>
+# Tehtud
+<br>I etapp<br>
+<br>II etapp<br>
+<br>III etapp<br>
