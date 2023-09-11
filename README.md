@@ -7,8 +7,6 @@
 <br>Andmehaldus - Karl<br>
 <br>Turvalisus - Erik<br>
 <br>Graafika - Joosep<br>
-<br><br>
-<br>"Testfail nimega test_nimi.py (näiteks test_tauno.py), mis väljastaks ekraanile teie nime." - olemas<br>
 <br>Dokumentatsioon Discordis - https://discord.gg/ZmnFXVqj - Kui ei tööta, kontakteeruda<br>
 
 ![paberprototüüp](https://github.com/KarlGm4n/inprogress/assets/143991529/29164102-4e0c-49ca-bb80-46559e98f4ae)
