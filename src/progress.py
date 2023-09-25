@@ -26,7 +26,7 @@ class MyFrame1(customtkinter.CTkFrame):
 
 
 class MyFrame2(customtkinter.CTkFrame):
-    def __init__(self, master, **kwargs):
+    def __init__(self, master, item_list, command=None, **kwargs):
         super().__init__(master, **kwargs)
 
         def slider_event(value):
@@ -47,10 +47,41 @@ class MyFrame2(customtkinter.CTkFrame):
         self.label = customtkinter.CTkLabel(self, text="Complexity", font=("", 18))
         self.label.place(relx=0.05, rely=0.4, anchor='w')
         
+        self.command = command
+        self.checkbox_list = []
+        for i, item in enumerate(item_list):
+            self.add_item(item)
+
+        def add_item(self, item):
+            checkbox = customtkinter.CTkCheckBox(self, text=item)
+            if self.command is not None:
+                checkbox.configure(command=self.command)
+            checkbox.grid(row=len(self.checkbox_list), column=0, pady=(0, 10))
+            self.checkbox_list.append(checkbox)
+
+        def remove_item(self, item):
+            for checkbox in self.checkbox_list:
+                if item == checkbox.cget("text"):
+                    checkbox.destroy()
+                    self.checkbox_list.remove(checkbox)
+                    return
+        
         check_var = customtkinter.StringVar(value="on")
-        self.checkbox = customtkinter.CTkCheckBox(self, text="CTkCheckBox", command=checkbox_event,
+        self.checkbox = customtkinter.CTkCheckBox(self, text="a-z", command=checkbox_event,
                                      variable=check_var, onvalue="on", offvalue="off")
-        self.checkbox.place(relx=0.5, rely=0.4, anchor='w')
+        self.checkbox.place(relx=0.3, rely=0.4, anchor='w')
+        
+        self.checkbox = customtkinter.CTkCheckBox(self, text="A-z", command=checkbox_event,
+                                     variable=check_var, onvalue="on", offvalue="off")
+        self.checkbox.place(relx=0.45, rely=0.4, anchor='w')
+        
+        self.checkbox = customtkinter.CTkCheckBox(self, text="0-9", command=checkbox_event,
+                                     variable=check_var, onvalue="on", offvalue="off")
+        self.checkbox.place(relx=0.6, rely=0.4, anchor='w')
+        
+        self.checkbox = customtkinter.CTkCheckBox(self, text="%()=*", command=checkbox_event,
+                                     variable=check_var, onvalue="on", offvalue="off")
+        self.checkbox.place(relx=0.75, rely=0.4, anchor='w')
 
 
 class ScrollableFrame(customtkinter.CTkScrollableFrame):
@@ -84,7 +115,8 @@ class App(customtkinter.CTk):
         self.my_frame1.grid(row=0, column=0, padx=20, pady=20)
         self.my_frame1.grid_propagate(False)
 
-        self.my_frame2 = MyFrame2(master=self, width=550, height=310)
+        self.my_frame2 = MyFrame2(master=self, item_list=[f"item {i}" for i in range(50)], width=550, height=310)
+        self.my_frame2.add_item("new item")
         self.my_frame2.grid(row=2, column=0, padx=20, pady=20)
         self.my_frame2.grid_propagate(False)
 
