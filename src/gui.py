@@ -5,15 +5,16 @@ ctk.set_default_color_theme("green")
 app = ctk.CTk()
 app.geometry("300x300")
 app.title("MSS")
+root = tk.Tk()
 def login():
-    username = "0"
-    password = "0"
-    new_window = ctk.CTkToplevel(app)
-    new_window.title("Uus Aken")
-    new_window.geometry("350x150")
+    username = ""
+    password = ""
+    #new_window = ctk.CTkToplevel(app)
+    #new_window.title("New window")
+    #new_window.geometry("350x150")
     if user_entry.get() == username and user_pass.get() == password:
         tkmb.showinfo(title="Login Successful",message="Sisselogimine õnnestus!")
-        ctk.CTkLabel(new_window,text="tühi").pack()
+        root.destroy()
     elif user_entry.get() == username and user_pass.get() != password:
         tkmb.showwarning(title='Wrong password',message='Sisestatud parool on vigane.')
     elif user_entry.get() != username and user_pass.get() == password:
