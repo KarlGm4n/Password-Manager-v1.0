@@ -1,5 +1,6 @@
 from tkinter import *
 import customtkinter
+from gui import *
 
 
 class MyFrame1(customtkinter.CTkFrame):
