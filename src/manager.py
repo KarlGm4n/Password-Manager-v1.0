@@ -35,7 +35,7 @@ def get_password():
         messagebox.showinfo("Andmed", f"Kasutajanimi: {passwords[service]['username']}\nParool: {decrypted_password}")
     else:
         messagebox.showwarning("Viga", "Andmeid ei leitud.")
-
+   
 key = generate_key()
 
 instructions = '''Et lisada andmed, täitke kõik väljad ning vajutage "Lisa andmed".
