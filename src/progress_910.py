@@ -1,5 +1,44 @@
 from tkinter import *
 import customtkinter
+from cryptography.fernet import Fernet
+
+global service_entry
+
+def generate_key():
+    return Fernet.generate_key()
+
+def encrypt_password(key, password):
+    f = Fernet(key)
+    return f.encrypt(password.encode()).decode()
+
+def decrypt_password(key, encrypted_password):
+    f = Fernet(key)
+    return f.decrypt(encrypted_password.encode()).decode()
+
+passwords = {}
+
+def add_password():
+    service = service_entry.get()
+    username = username_entry.get()
+    password = password_entry.get()
+
+    if service and username and password:
+        encrypted_password = encrypt_password(key, password)
+        passwords[service] = {'username': username, 'password': encrypted_password}
+        messagebox.showinfo("Õnnestus", "Andmed edukalt lisatud!")
+    else:
+        messagebox.showwarning("Viga", "Palun täitke kõik väljad.")
+
+def get_password():
+    service = service_entry.get()
+    if service in passwords:
+        encrypted_password = passwords[service]['password']
+        decrypted_password = decrypt_password(key, encrypted_password)
+        messagebox.showinfo("Andmed", f"Kasutajanimi: {passwords[service]['username']}\nParool: {decrypted_password}")
+    else:
+        messagebox.showwarning("Viga", "Andmeid ei leitud.")
+   
+key = generate_key()
 
 
 class MyFrame1(customtkinter.CTkFrame):
@@ -21,8 +60,11 @@ class MyFrame1(customtkinter.CTkFrame):
         self.passwordEntry = customtkinter.CTkEntry(self, placeholder_text="Password", width=200, show="*")
         self.passwordEntry.place(relx=0.5, rely=0.5, anchor='n')
 
-        self.accountButton = customtkinter.CTkButton(self, text="Add", command=button_event)
+        self.accountButton = customtkinter.CTkButton(self, text="Add", command=add_password)
         self.accountButton.place(relx=0.5, rely=0.65, anchor='n')
+        
+        self.get_Button = customtkinter.CTkButton(self, text="Saa andmed", command=get_password)
+        self.get_Button.place(relx=0.7, rely=0.75, anchor='n')
 
 
 class MyFrame2(customtkinter.CTkFrame):
