@@ -33,35 +33,66 @@ class MyFrame2(customtkinter.CTkFrame):
 
         def slider_event(value):
             self.label1.configure(text=round(value))
-            print(round(value))
-            return round(value)
             
         def checkbox_event():
             List = []
             for item in varList:
                 if item.get() != "":
                     List.append(item.get())
-            print(List)
+            return List
         
         def generate():
-            MAX_LEN = 
+            MAX_LEN = round(self.slider.get())
             DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
             LOCASE_CHARACTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'm', 'n', 'o', 'p', 'q','r', 's', 't', 'u', 'v', 'w', 'x', 'y','z']
             UPCASE_CHARACTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q','R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y','Z']
             SYMBOLS = ['@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>','*', '(', ')', '<']
-            COMBINED_LIST = DIGITS + UPCASE_CHARACTERS + LOCASE_CHARACTERS + SYMBOLS
+            COMBINED_LIST = []
+            temp_pass = ""
+            times = 0
             rand_digit = random.choice(DIGITS)
             rand_upper = random.choice(UPCASE_CHARACTERS)
             rand_lower = random.choice(LOCASE_CHARACTERS)
             rand_symbol = random.choice(SYMBOLS)
-            temp_pass = rand_digit + rand_upper + rand_lower + rand_symbol
+            xd_pass = DIGITS + UPCASE_CHARACTERS + LOCASE_CHARACTERS + SYMBOLS
+            if checkbox_event()[0] == "on":
+                COMBINED_LIST.extend(LOCASE_CHARACTERS)
+                temp_pass += rand_lower
+            else:
+                xd_pass = [x for x in xd_pass if x not in LOCASE_CHARACTERS]
+                times += 1
+                
+            if checkbox_event()[1] == "on":
+                COMBINED_LIST.extend(UPCASE_CHARACTERS)
+                temp_pass += rand_upper
+            else:
+                xd_pass = [x for x in xd_pass if x not in UPCASE_CHARACTERS]
+                times += 1
+                
+            if checkbox_event()[2] == "on":
+                COMBINED_LIST.extend(DIGITS)
+                temp_pass += rand_digit
+            else:
+                xd_pass = [x for x in xd_pass if x not in DIGITS]
+                times += 1
+                
+            if checkbox_event()[3] == "on":
+                COMBINED_LIST.extend(SYMBOLS)
+                temp_pass += rand_symbol
+            else:
+                xd_pass = [x for x in xd_pass if x not in SYMBOLS]
+                times += 1
+            
+            for x in range(times):
+                temp_pass += random.choice(xd_pass)
+                times -= 1
             for x in range(MAX_LEN - 4):
                 temp_pass = temp_pass + random.choice(COMBINED_LIST)
                 temp_pass_list = array.array('u', temp_pass)
                 random.shuffle(temp_pass_list)
             password = ""
             for x in temp_pass_list:
-                    password = password + x
+                password = password + x
             print(password)
             self.previewlabel.configure(text=password)
             
@@ -71,16 +102,15 @@ class MyFrame2(customtkinter.CTkFrame):
         self.label = customtkinter.CTkLabel(self, text="Length:", font=("", 18))
         self.label.place(relx=0.05, rely=0.25, anchor='w')
         
-        self.label1 = customtkinter.CTkLabel(self, text="10", font=("", 18))
+        self.label1 = customtkinter.CTkLabel(self, text="12", font=("", 18))
         self.label1.place(relx=0.4, rely=0.25, anchor='w')
 
-        self.slider = customtkinter.CTkSlider(self, from_=1, to=20, number_of_steps=20, command=slider_event)
+        self.slider = customtkinter.CTkSlider(self, from_=5, to=20, number_of_steps=20, command=slider_event)
         self.slider.place(relx=0.5, rely=0.25, anchor='w')
         
         self.label = customtkinter.CTkLabel(self, text="Complexity:", font=("", 18))
         self.label.place(relx=0.05, rely=0.4, anchor='w')
-        
-        List = []
+    
         varList = []
         
         var1 = StringVar()
