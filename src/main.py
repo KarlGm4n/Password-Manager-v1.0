@@ -4,12 +4,14 @@ import random
 import array
 import tkinter.messagebox
 
+
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("green")
 
 app = customtkinter.CTk()
 app.geometry("300x300")
 app.title("MSS")
+
 
 def login():
     username = ""
