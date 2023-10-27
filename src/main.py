@@ -4,14 +4,12 @@ import random
 import array
 import tkinter.messagebox
 
-
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("green")
 
 app = customtkinter.CTk()
 app.geometry("300x300")
 app.title("MSS")
-
 
 def login():
     username = ""
@@ -61,7 +59,7 @@ class MyFrame1(customtkinter.CTkFrame):
         self.passwordEntry.place(relx=0.5, rely=0.5, anchor='n')
 
         self.accountButton = customtkinter.CTkButton(self, text="Add", command=button_event)
-        self.accountButton.place(relx=0.5, rely=0.65, anchor='n')
+        self.accountButton.place(relx=0.5, rely=0.75, anchor='n')
 
 
 class MyFrame2(customtkinter.CTkFrame):
@@ -195,6 +193,31 @@ class ScrollableFrame(customtkinter.CTkScrollableFrame):
 
         self.label = customtkinter.CTkLabel(self, text="Managed accounts", font=("", 20))
         self.label.grid(row=0, column=0, padx=200, pady=10)
+        
+
+class MyFrame4(customtkinter.CTkFrame):
+    def __init__(self, master, **kwargs):
+        super().__init__(master, **kwargs)
+
+        def button_event():
+            new_window = customtkinter.CTkToplevel(self)
+            new_window.title("Sätted")
+            new_window.geometry("300x150")
+            
+            def LightMode():
+                customtkinter.set_appearance_mode("light")
+
+            def DarkMode():
+                customtkinter.set_appearance_mode("dark")
+                
+            light_button = customtkinter.CTkButton(new_window, text="Hele versioon", command=LightMode)
+            light_button.pack(pady=10)
+
+            dark_button = customtkinter.CTkButton(new_window, text="Tume versioon", command=DarkMode)
+            dark_button.pack(pady=10)
+
+        self.accountButton = customtkinter.CTkButton(self, text="Settings", command=button_event)
+        self.accountButton.place(relx=0.5, rely=0.3, anchor='n')
 
 
 class App(customtkinter.CTk):
@@ -216,16 +239,26 @@ class App(customtkinter.CTk):
         y = (screen_height/2) - (height/2)
         self.geometry('%dx%d+%d+%d' % (1200, 700, x, y)) # Tsentreerib akna
 
-        self.my_frame1 = MyFrame1(master=self, width=550, height=310)
-        self.my_frame1.grid(row=0, column=0, padx=20, pady=20)
+        self.my_frame1 = MyFrame1(master=self, width=550, height=290)
+        self.my_frame1.grid(row=0, column=0, padx=5, pady=5)
         self.my_frame1.grid_propagate(False)
 
-        self.my_frame2 = MyFrame2(master=self, width=550, height=310)
-        self.my_frame2.grid(row=2, column=0, padx=20, pady=20)
+        self.my_frame2 = MyFrame2(master=self, width=550, height=300)
+        self.my_frame2.grid(row=1, column=0, padx=10, pady=5)
         self.my_frame2.grid_propagate(False)
 
         self.scrollable_frame = ScrollableFrame(master=self, width=550, height=660)
         self.scrollable_frame.grid(row=0, column=2, rowspan=3, padx=20, pady=20)
+        
+        self.my_frame4 = MyFrame4(master=self, width=160, height=50)
+        self.my_frame4.grid(row=2, column=0, padx=10, pady=5)
+        self.my_frame4.grid_propagate(False)
+        
+        def open_toplevel(self):
+            if self.toplevel_window is None or not self.toplevel_window.winfo_exists():
+                self.toplevel_window = ToplevelWindow(self) 
+            else:
+                self.toplevel_window.focus()
 
 
 app.mainloop()
