@@ -16,8 +16,9 @@
 <br>Andmehaldus<br>
 <br>Andmete krüpeetimine, soolamine<br>
 # Tegemisel
-<br>Kasutajaliides<br>
+---
 # Tehtud
 <br>I etapp<br>
 <br>II etapp<br>
 <br>III etapp<br>
+<br>Kasutajaliides<br>
