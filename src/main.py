@@ -226,5 +226,4 @@ class App(customtkinter.CTk):
         self.scrollable_frame.grid(row=0, column=2, rowspan=3, padx=20, pady=20)
 
 
-#app = App()
 app.mainloop()
