@@ -8,7 +8,14 @@ customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("green")
 
 app = customtkinter.CTk()
-app.geometry("300x300")
+w = app.winfo_reqwidth()
+h = app.winfo_reqheight()
+ws = app.winfo_screenwidth()
+hs = app.winfo_screenheight()
+x = (ws/2) - (w/2)
+y = (hs/2) - (h/2)
+app.geometry('%dx%d+%d+%d' % (300, 300, x, y))
+#app.geometry("300x300")
 app.title("MSS")
 
 def login():
