@@ -235,8 +235,8 @@ class ScrollableFrame(customtkinter.CTkScrollableFrame):
         button1 = customtkinter.CTkButton(self, text="Isikutunnistus", width=100, height=24)
         button2 = customtkinter.CTkButton(self, text="Eemalda", width=100, height=24)
         if self.command is not None:
-            button1.configure(command=lambda button_type="Credentials": self.command(list, button_type))
-            button2.configure(command=lambda button_type="Remove": self.command(list, button_type))
+            button1.configure(command=lambda button_type="Isikutunnistus": self.command(list, button_type))
+            button2.configure(command=lambda button_type="Eemalda": self.command(list, button_type))
         label.grid(row=len(self.label_list), column=0, pady=(0, 10), sticky="w")
         button1.grid(row=len(self.label_list), column=1, pady=(0, 10), padx=5)
         button2.grid(row=len(self.label_list), column=2, pady=(0, 10), padx=5)
