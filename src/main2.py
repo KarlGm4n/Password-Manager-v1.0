@@ -26,7 +26,6 @@ def save(data, password):
     fernet = Fernet(key)
 
     data = json.dumps(data)
-    print(data)
 
     krtud = fernet.encrypt(data.encode())
 
@@ -54,7 +53,6 @@ password = input("Sisesta parool: ")        # Sisenemiseks parooli nõudmine
 if os.path.isfile("andmed.txt"):
     try:
         data = load(password)
-        print(data)
     except:
         print("Vale parool!")
         exit()
@@ -158,7 +156,6 @@ class MyFrame2(customtkinter.CTkFrame):
             password = ""
             for x in temp_pass_list:
                 password = password + x
-            print(password)
             self.previewlabel.configure(text=password)
             pyperclip.copy(password)        # Kopeerib genereeritud parooli lõikelauale
             spam = pyperclip.paste()
