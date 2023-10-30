@@ -10,7 +10,7 @@
 <br>Dokumentatsioon Discordis - https://discord.gg/ZmnFXVqj - Kui ei tööta, kontakteeruda liikmetega<br>
 
 ![paberprototüüp](https://github.com/KarlGm4n/inprogress/assets/143991889/a2372b0c-81d0-4425-bdb7-949b1f3e72c2)
-![gui]()
+![gui](https://github.com/KarlGm4n/Password-Manager-v1.0/assets/143991529/65e3c6bd-f361-4f94-82f3-f066630a410d)
 
 # Teha
 <br>Esitlemine<br>
