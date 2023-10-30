@@ -1,16 +1,16 @@
 # Kasutusjuhend
-<br><br>
-<br>1. - Aseta programm soovitavasse kausta<br>
-<br>2. - login_window.py kasutamine<br>
-<br>  2.1 - Määra programmi koodis parool ja paroolihalduri "main2.py" asukoht<br>
-<br>3. - main2.py kasutamine<br>
-<br>  4.1 - Käivita programm esimest korda, sisesta parool mida edaspidi kasutad<br>
-<br>  4.2 - Sisesta nõutud andmed, klõpsa nupul "Lisa andmed"
-<br>    4.2.1 - Soovi korral genereeri soovitavate nõuetega parool
-<br>    4.2.2 - Pane vähemalt ühte kasti linnuke, liuguriga sea parooli pikkus
-<br>  4.3 - Andmete kätte saamiseks klõsa soovitud keskkonna tagusel nupul "Isikutunnistus"
-<br>  4.4 - Seadete menüüs saad valida heleda ja tumeda režiimi vahel
-<br>  4.5 - Andmete kustusamiseks klõpsa nupul "Eemalda"
-<br>  4.6 - Andmed salvestuvad sulgemisel
-<br>  4.7 - Taaskäivitamisel sisesta parool, mida kasutasid sammul 4.1
-<br>    4.7.1 - Parooli lähtestamiseks kustuta fail "andmed.txt"   !!! HOIATUS !!! See kustutab kõik talletatud andmed!
+
+1. - Aseta programm soovitavasse kausta
+2. - login_window.py kasutamine
+  2.1 - Määra programmi koodis parool ja paroolihalduri "main2.py" asukoht
+3. - main2.py kasutamine
+  4.1 - Käivita programm esimest korda, sisesta parool mida edaspidi kasutad
+  4.2 - Sisesta nõutud andmed, klõpsa nupul "Lisa andmed"
+    4.2.1 - Soovi korral genereeri soovitavate nõuetega parool
+    4.2.2 - Pane vähemalt ühte kasti linnuke, liuguriga sea parooli pikkus
+  4.3 - Andmete kätte saamiseks klõsa soovitud keskkonna tagusel nupul "Isikutunnistus"
+  4.4 - Seadete menüüs saad valida heleda ja tumeda režiimi vahel
+  4.5 - Andmete kustusamiseks klõpsa nupul "Eemalda"
+  4.6 - Andmed salvestuvad sulgemisel
+  4.7 - Taaskäivitamisel sisesta parool, mida kasutasid sammul 4.1
+    4.7.1 - Parooli lähtestamiseks kustuta fail "andmed.txt"   !!! HOIATUS !!! See kustutab kõik talletatud andmed!
