@@ -4,7 +4,7 @@
 <br>Liikmed - Karl (@KarlGm4n) ; Erik (@2003Saab9-5tid22) ; Joosep (@Sh4duwu)<br>
 <br>Kirjeldus - Paroolihaldur + valitavate tingimustega genereerija<br>
 <br>Rollid:<br>
-<br>Andmehaldus - Karl<br>
+<br>Arendusinsener - Karl<br>
 <br>Turvalisus - Erik<br>
 <br>Graafika - Joosep<br>
 <br>Dokumentatsioon Discordis - https://discord.gg/ZmnFXVqj - Kui ei tööta, kontakteeruda liikmetega<br>
@@ -16,6 +16,7 @@
 <br>Esitlemine<br>
 # Tegemisel
 <br>Juhend<br>
+<br>Plakat<br>
 # Tehtud
 <br>Logimine<br>
 <br>Haldus<br>
