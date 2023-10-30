@@ -232,8 +232,8 @@ class ScrollableFrame(customtkinter.CTkScrollableFrame):
 
     def add_item(self, list):
         label = customtkinter.CTkLabel(self, text=(f"Site: {list[0]}"), compound="left", padx=5, anchor="w")        # Kontode lisamine
-        button1 = customtkinter.CTkButton(self, text="Credentials", width=100, height=24)
-        button2 = customtkinter.CTkButton(self, text="Remove", width=100, height=24)
+        button1 = customtkinter.CTkButton(self, text="Isikutunnistus", width=100, height=24)
+        button2 = customtkinter.CTkButton(self, text="Eemalda", width=100, height=24)
         if self.command is not None:
             button1.configure(command=lambda button_type="Credentials": self.command(list, button_type))
             button2.configure(command=lambda button_type="Remove": self.command(list, button_type))
@@ -277,7 +277,7 @@ class MyFrame4(customtkinter.CTkFrame):
             dark_button = customtkinter.CTkButton(new_window, text="Tume versioon", command=DarkMode)        # Tume variant
             dark_button.pack(pady=10)
 
-        self.accountButton = customtkinter.CTkButton(self, text="Settings", command=button_event)        # Nupu asukoht ja kujundus
+        self.accountButton = customtkinter.CTkButton(self, text="Seaded", command=button_event)        # Nupu asukoht ja kujundus
         self.accountButton.place(relx=0.5, rely=0.3, anchor='n')
 
 
@@ -333,7 +333,7 @@ class App(customtkinter.CTk):
     def label_button_frame_event(self, list, button_type):
         if button_type == "Isikutunnistus":
             print(f"Account credentials: username {list[1]} and password {list[2]}")        # Haldusaluste kõrval olevad nupud
-        if button_type == "Kustuta":
+        if button_type == "Eemalda":
             self.scrollable_frame.remove_item(list)
             data.remove(list)
 
