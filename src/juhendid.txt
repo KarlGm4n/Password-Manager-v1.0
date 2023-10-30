@@ -8,7 +8,7 @@
   4.2 - Sisesta nõutud andmed, klõpsa nupul "Lisa andmed"
     4.2.1 - Soovi korral genereeri soovitavate nõuetega parool
     4.2.2 - Pane vähemalt ühte kasti linnuke, liuguriga sea parooli pikkus
-  4.3 - Andmete kätte saamiseks klõsa soovitud keskkonna tagusel nupul "Isikutunnistus"
+  4.3 - Andmete kätte saamiseks klõpsa soovitud keskkonna tagusel nupul "Isikutunnistus"
   4.4 - Seadete menüüs saad valida heleda ja tumeda režiimi vahel
   4.5 - Andmete kustusamiseks klõpsa nupul "Eemalda"
   4.6 - Andmed salvestuvad sulgemisel
