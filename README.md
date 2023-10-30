@@ -13,12 +13,10 @@
 ![gui](https://github.com/KarlGm4n/inprogress/assets/143991889/a2372b0c-81d0-4425-bdb7-949b1f3e72c2)
 
 # Teha
-<br>Andmehaldus<br>
-<br>Andmete krüpeetimine, soolamine<br>
+<br>Esitlemine<br>
 # Tegemisel
----
+<br>Juhend<br>
 # Tehtud
-<br>I etapp<br>
-<br>II etapp<br>
-<br>III etapp<br>
-<br>Kasutajaliides<br>
+<br>Logimine<br>
+<br>Haldus<br>
+<br>Genereerimine<br>
