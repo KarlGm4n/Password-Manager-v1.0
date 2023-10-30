@@ -23,3 +23,23 @@
 <br>Haldus<br>
 <br>Genereerimine<br>
 <br>Juhend<br>
+<br><br>
+<br><br>
+# Kasutusjuhend
+
+1. - Aseta programm soovitavasse kausta
+
+2. - login_window.py kasutamine
+  2.1 - Määra programmi koodis parool ja paroolihalduri "main2.py" asukoht
+
+3. - main2.py kasutamine
+  3.1 - Käivita programm esimest korda, sisesta parool mida edaspidi kasutad
+  3.2 - Sisesta nõutud andmed, klõpsa nupul "Lisa andmed"
+    3.2.1 - Soovi korral genereeri soovitavate nõuetega parool
+    3.2.2 - Pane vähemalt ühte kasti linnuke, liuguriga sea parooli pikkus
+  3.3 - Andmete kätte saamiseks klõpsa soovitud keskkonna tagusel nupul "Isikutunnistus"
+  3.4 - Seadete menüüs saad valida heleda ja tumeda režiimi vahel
+  3.5 - Andmete kustusamiseks klõpsa nupul "Eemalda"
+  3.6 - Andmed salvestuvad sulgemisel
+  3.7 - Taaskäivitamisel sisesta parool, mida kasutasid sammul 4.1
+    3.7.1 - Parooli lähtestamiseks kustuta fail "andmed.txt"   !!! HOIATUS !!! See kustutab kõik talletatud andmed!
